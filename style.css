@@ -1,0 +1,391 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #c7b7a3;
+  height: 4.5rem;
+  align-items: center;
+  align-content: center;
+  color: #561c24;
+  text-align: center;
+  padding: 2rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+html {
+  background-color: #c7b7a3;
+}
+.titulo {
+  text-decoration-line: underline;
+  font-size: 3.8rem;
+  display: inline;
+  align-content: center;
+  position: relative;
+}
+.button1 {
+  width: 10em;
+  height: 2em;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.1em 1em;
+  border: #6d2932 solid 0.15em;
+  border-radius: 0.4em;
+  color: #6d2932;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.button1 p {
+  z-index: 1;
+}
+
+.button1:hover {
+  color: #212121;
+  cursor: pointer;
+}
+
+.button1:active {
+  border-color: #6d2932;
+}
+.button1::after,
+.button1::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: #6d2932;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button1::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button1::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button1:hover:before {
+  transform: translateX(-1em);
+}
+
+.button1:hover:after {
+  transform: translateX(1em);
+}
+
+.button1:active:before,
+.button1:active:after {
+  background: #6d2932;
+}
+.button {
+  width: 180px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: #6d2932;
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
+  cursor: pointer;
+}
+
+.button > div,
+.button > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+.button:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.button .clone > *,
+.button .text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 0.25rem;
+}
+
+.button .clone > * {
+  transform: translateY(60px);
+}
+
+.button:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.button:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.button:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+.button:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.button:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.button:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+/* icon style and hover */
+.button svg {
+  width: 1.25rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+.button:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.main {
+  background-color: #e8d8c4;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.divabout {
+  flex-shrink: 0;
+  width: auto;
+}
+.divcontact {
+  flex-shrink: 0;
+  width: auto;
+}
+.divroom {
+  flex-shrink: 0;
+  width: auto;
+}
+.oculta {
+  display: none;
+}
+.roomsData {
+  display: flex;
+}
+.contactData {
+  display: flex; /* Contenedor flexbox */
+}
+.aboutData {
+  display: flex;
+}
+.fondito {
+  width: 50%;
+  .contenedor {
+    position: relative; /* Posicionamiento relativo para el contenedor */
+  }
+}
+.fondoInicio {
+  width: 50%;
+  height: auto;
+  position: absolute; /* Posicionamiento absoluto para la imagen */
+  left: 50%;
+  transform: translateX(-50%); /* Centra la imagen horizontalmente */
+  top: 1.25rem; /* Ajusta la posición vertical de la imagen */
+  margin-top: 28%;
+}
+.redes {
+  position: absolute;
+  z-index: 1;
+  width: 9.38rem; /* Tamaño mediano de las imágenes */
+  height: 9.38rem; /* Mantiene la proporción de aspecto */
+  margin: 1.25rem; /* Espacio entre imágenes */
+  border-radius: 1.88rem; /* Redondea las esquinas con un radio de 10px */
+}
+.imagenesRedes {
+  margin-left: 12%;
+  margin-top: 5%;
+  width: 60%;
+  height: auto;
+  display: flex; /* Contenedor flexbox */
+  flex-direction: row; /* Organiza las imágenes en fila */
+  justify-content: space-between; /* Distribuye el espacio entre las imágenes */
+  align-items: center; /* Alinea las imágenes verticalmente en el centro */
+}
+.redes {
+  transition: transform 0.3s ease-in-out; /* Duración y suavidad de la transición */
+}
+
+.redes:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% */
+}
+.buttonsrooms {
+  background-color: #e8d8c4;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.carousel-container {
+  position: absolute;
+  z-index: 1;
+  border: 0.62rem solid #561c24;
+  box-shadow: inset 0px 2px 5px rgb(0, 0, 0);
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 35%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+}
+
+.carousel-item {
+  background-color: #6d29323a;
+  flex: 0 0 auto;
+  width: 90%;
+}
+
+.carousel-item img {
+  margin-left: 10%;
+  width: 90%;
+  height: auto;
+}
+.sharedRooms {
+  border-radius: 0.62rem; /* Redondea las esquinas con un radio de 10px */
+}
+
+.loader {
+  position: absolute;
+  z-index: 1;
+  margin-left: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 0 50%;
+  background: #0000;
+  background-image: radial-gradient(
+    circle 11.2px at 50% 50%,
+    #0000 94%,
+    #ff4747
+  );
+}
+
+.loader:after {
+  animation: pulse-ytk0dhmd 1s infinite;
+  transform: perspective(336px) translateZ(0px);
+}
+
+@keyframes pulse-ytk0dhmd {
+  to {
+    transform: perspective(336px) translateZ(168px);
+    opacity: 0;
+  }
+}
+.location {
+  text-decoration-line: underline;
+  position: absolute;
+}
+.locationt {
+  margin-left: 30%;
+  width: 20%;
+  text-decoration-line: underline;
+}
+.linkloader {
+  top: 46%;
+  margin-left: 48%;
+  position: absolute;
+  z-index: 1;
+}
+.h4 {
+  border: 0.31rem solid #561c24b1;
+  box-shadow: inset 0px 2px 5px rgb(0, 0, 0);
+  position: absolute;
+  z-index: 1;
+  background: #c7b7a3;
+  align-items: center;
+  width: 45%;
+  margin-top: 4%;
+  margin-left: 28%;
+  text-align: center;
+}
+
+.logoabout {
+  border: 0.31rem solid #561c246d;
+  height: 9.38rem;
+  border-radius: 50%;
+  margin-left: 44%;
+}
+/* ... código original ... */
+
+@media (max-width: 768px) {
+  /* Tablet y pantallas más pequeñas */
+  .main {
+    flex-direction: column;
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+
+  .divabout,
+  .divcontact,
+  .divroom {
+    width: 100%;
+    margin: 1rem; /* Agrega márgenes para separar los elementos */
+  }
+
+  .carousel-container {
+    width: 80%;
+    margin: 0 auto; /* Centra horizontalmente */
+  }
+
+  .fondoInicio {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  /* ... otros ajustes ... */
+}
