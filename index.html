@@ -5,20 +5,20 @@
     <div>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <img
-        id="meljoe1"
-        src="./imagenes /Logo_2 - Meljoe.png"
-        alt="Descripción de la imagen"
-        width="200"
-        height="166"
-        style="position: absolute"
-      />
-      <title>Hostel los mogolicos</title>
-      <link rel="stylesheet" href="style.css" />
     </div>
   </head>
   <body>
     <header>
+      <img
+        id="meljoe1"
+        src="./imagenes /Logo_2 - Meljoe.png"
+        alt="Descripción de la imagen"
+        width="80%"
+        height="auto"
+        style="position: relative"
+      />
+
+      <link rel="stylesheet" href="style.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -274,7 +274,7 @@
       carousel.scrollLeft += scrollAmount;
     });
   </script>
-  <section class="fondito">
+  <section class="fondito" id="fonditoo">
     <img
       id="meljoe2"
       src="./imagenes /Logo_1 - Meljoe.png"
@@ -328,6 +328,7 @@
     const habitacionesButton = document.getElementById("habitacionesButton");
     const nosotrosButton = document.getElementById("nosotrosButton");
     const contactoButton = document.getElementById("contactoButton");
+    const fondo = document.getElementById("fonditoo");
     const habitacionesContenido = document.getElementById(
       "habitacionesContenido"
     );
@@ -339,9 +340,30 @@
     const contactoContenido = document.getElementById("contactoContenido");
 
     habitacionesButton.addEventListener("click", () => {
-      habitacionesContenido.classList.toggle("oculta");
-      habitacionesContenido1.classList.toggle("oculta");
-      nosotrosContenido.classList.add("oculta");
+      console.log("entre");
+      if (habitacionesContenido.className === "oculta") {
+        console.log("entre1");
+
+        habitacionesContenido.classList.remove("oculta") +
+          habitacionesContenido.classList.add("roomsData");
+        console.log("cambie 2");
+      } else {
+        habitacionesContenido.classList.remove("roomsData") +
+          habitacionesContenido.classList.add("oculta");
+      }
+      if (
+        fondo.className === "fondito" ||
+        habitacionesContenido.className === "roomsData"
+      ) {
+        console.log("entre fondito");
+        fondo.classList.add("oculta") + fondo.classList.remove("fondito");
+      } else {
+        console.log("entre a fondito 1");
+        fondo.classList.remove("oculta") + fondo.classList.add("fondito");
+      }
+      nosotrosContenido.classList.remove("aboutData") +
+        nosotrosContenido.classList.add("oculta");
+      contactoContenido.classList.remove("contactData");
       contactoContenido.classList.add("oculta");
       roomsContent.classList.add("oculta");
       badroomsContent.classList.add("oculta");
@@ -350,15 +372,56 @@
     });
 
     nosotrosButton.addEventListener("click", () => {
-      nosotrosContenido.classList.toggle("oculta");
-      habitacionesContenido.classList.add("oculta");
+      console.log("entre");
+      if (nosotrosContenido.className === "oculta") {
+        console.log("entre1");
+        nosotrosContenido.classList.remove("oculta") +
+          nosotrosContenido.classList.add("aboutData");
+        console.log("cambie 2");
+      } else {
+        nosotrosContenido.classList.remove("aboutData") +
+          nosotrosContenido.classList.add("oculta");
+      }
+      if (
+        fondo.className === "fondito" ||
+        nosotrosContenido.className === "aboutData"
+      ) {
+        console.log("entre fondito");
+        fondo.classList.add("oculta") + fondo.classList.remove("fondito");
+      } else {
+        console.log("entre a fondito 1");
+        fondo.classList.remove("oculta") + fondo.classList.add("fondito");
+      }
+      habitacionesContenido.classList.remove("roomsData") +
+        habitacionesContenido.classList.add("oculta");
+      contactoContenido.classList.remove("contactData");
       contactoContenido.classList.add("oculta");
       habitacionesContenido1.classList.add("oculta");
     });
 
     contactoButton.addEventListener("click", () => {
-      contactoContenido.classList.toggle("oculta");
+      if (contactoContenido.className === "oculta") {
+        contactoContenido.classList.remove("oculta") +
+          console.log("removi el coc");
+        contactoContenido.classList.add("contactData");
+      } else {
+        console.log("entre al else");
+        contactoContenido.classList.remove("contactData") +
+          contactoContenido.classList.add("oculta");
+      }
+      if (
+        fondo.className === "fondito" ||
+        contactoContenido.className === "contactData"
+      ) {
+        console.log("entre fondito");
+        fondo.classList.add("oculta") + fondo.classList.remove("fondito");
+      } else {
+        console.log("entre a fondito 1");
+        fondo.classList.remove("oculta") + fondo.classList.add("fondito");
+      }
+      habitacionesContenido.classList.remove("roomsData");
       habitacionesContenido.classList.add("oculta");
+      nosotrosContenido.classList.remove("aboutData");
       nosotrosContenido.classList.add("oculta");
       habitacionesContenido1.classList.add("oculta");
     });

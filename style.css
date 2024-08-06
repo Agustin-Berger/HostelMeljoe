@@ -7,34 +7,41 @@ body {
 
 header {
   background-color: #c7b7a3;
-  height: 4.5rem;
-  align-items: center;
-  align-content: center;
+  height: auto;
+  width: 100%;
+  grid-column-gap: 5%;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+
   color: #561c24;
   text-align: center;
-  padding: 2rem;
+  padding: 1%;
 }
 
 main {
-  padding: 2rem;
+  padding: 3%;
+  width: 100%;
+  height: auto;
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 2%;
 }
 html {
   background-color: #c7b7a3;
 }
 .titulo {
   text-decoration-line: underline;
-  font-size: 3.8rem;
-  display: inline;
-  align-content: center;
+  font-size: 350%;
+  display: flex;
+  align-content: flex-start;
   position: relative;
 }
 .button1 {
-  width: 10em;
-  height: 2em;
+  width: 100%;
+  height: auto;
 
   display: flex;
   align-items: center;
@@ -188,6 +195,7 @@ html {
 }
 
 .main {
+  width: 100%;
   background-color: #e8d8c4;
   display: flex;
   justify-content: center;
@@ -208,47 +216,61 @@ html {
 .oculta {
   display: none;
 }
+
 .roomsData {
   display: flex;
 }
 .contactData {
-  display: flex; /* Contenedor flexbox */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: px;
+  width: 100%;
+  height: auto;
 }
 .aboutData {
-  display: flex;
+  margin-top: 2%;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-row-gap: 4%;
+  align-content: center;
+  justify-items: center;
+  align-items: end;
 }
 .fondito {
-  width: 50%;
+  width: 100%;
+  height: auto;
+  margin-left: 1%;
   .contenedor {
     position: relative; /* Posicionamiento relativo para el contenedor */
   }
 }
 .fondoInicio {
-  width: 50%;
+  width: 100%;
   height: auto;
-  position: absolute; /* Posicionamiento absoluto para la imagen */
+  position: relative; /* Posicionamiento absoluto para la imagen */
   left: 50%;
   transform: translateX(-50%); /* Centra la imagen horizontalmente */
-  top: 1.25rem; /* Ajusta la posición vertical de la imagen */
-  margin-top: 28%;
 }
 .redes {
-  position: absolute;
-  z-index: 1;
+  display: flexbox;
   width: 9.38rem; /* Tamaño mediano de las imágenes */
   height: 9.38rem; /* Mantiene la proporción de aspecto */
   margin: 1.25rem; /* Espacio entre imágenes */
   border-radius: 1.88rem; /* Redondea las esquinas con un radio de 10px */
 }
 .imagenesRedes {
-  margin-left: 12%;
-  margin-top: 5%;
-  width: 60%;
-  height: auto;
-  display: flex; /* Contenedor flexbox */
-  flex-direction: row; /* Organiza las imágenes en fila */
-  justify-content: space-between; /* Distribuye el espacio entre las imágenes */
-  align-items: center; /* Alinea las imágenes verticalmente en el centro */
+  grid-area: 2 / 1 / 3 / 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: px;
 }
 .redes {
   transition: transform 0.3s ease-in-out; /* Duración y suavidad de la transición */
@@ -293,9 +315,8 @@ html {
 }
 
 .loader {
-  position: absolute;
-  z-index: 1;
-  margin-left: 50%;
+  position: fixed;
+  grid-area: 1 / 2 / 2 / 3;
   width: 2.8rem;
   height: 2.8rem;
   position: relative;
@@ -328,38 +349,49 @@ html {
   }
 }
 .location {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: end;
   text-decoration-line: underline;
-  position: absolute;
+  font-size: 200%;
 }
 .locationt {
-  margin-left: 30%;
-  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   text-decoration-line: underline;
 }
 .linkloader {
-  top: 46%;
-  margin-left: 48%;
-  position: absolute;
-  z-index: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  width: 10%;
+  height: 30%;
 }
 .h4 {
+  margin-left: 4%;
+  width: 90%;
+  height: 100%;
+  font-size: 150%;
   border: 0.31rem solid #561c24b1;
   box-shadow: inset 0px 2px 5px rgb(0, 0, 0);
-  position: absolute;
-  z-index: 1;
+  position: flex;
+  padding: -1%;
   background: #c7b7a3;
   align-items: center;
-  width: 45%;
-  margin-top: 4%;
-  margin-left: 28%;
+
   text-align: center;
 }
 
 .logoabout {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
   border: 0.31rem solid #561c246d;
   height: 9.38rem;
   border-radius: 50%;
-  margin-left: 44%;
 }
 /* ... código original ... */
 
