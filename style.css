@@ -269,6 +269,7 @@ html {
   border-radius: 1.88rem; /* Redondea las esquinas con un radio de 10px */
 }
 .imagenesRedes {
+  margin-left: 2%;
   grid-area: 2 / 1 / 3 / 3;
   width: 100%;
   display: grid;
