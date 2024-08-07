@@ -105,7 +105,7 @@ html {
   background: #6d2932;
 }
 .button {
-  width: 180px;
+  width: 11.25rem;
   height: 56px;
   overflow: hidden;
   border: none;
@@ -218,7 +218,12 @@ html {
 }
 
 .roomsData {
+  background-color: #e8d8c4;
   display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: auto;
+  justify-content: center;
 }
 .contactData {
   display: grid;
@@ -258,9 +263,9 @@ html {
 }
 .redes {
   display: flexbox;
-  width: 9.38rem; /* Tamaño mediano de las imágenes */
-  height: 9.38rem; /* Mantiene la proporción de aspecto */
-  margin: 1.25rem; /* Espacio entre imágenes */
+  width: 90%; /* Tamaño mediano de las imágenes */
+  height: 80%; /* Mantiene la proporción de aspecto */
+  margin: 1%; /* Espacio entre imágenes */
   border-radius: 1.88rem; /* Redondea las esquinas con un radio de 10px */
 }
 .imagenesRedes {
@@ -285,7 +290,9 @@ html {
   justify-content: center;
   gap: 1.25rem;
 }
-
+.roomscont {
+  display: flex;
+}
 .carousel-container {
   position: absolute;
   z-index: 1;

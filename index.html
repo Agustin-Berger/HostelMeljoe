@@ -46,51 +46,49 @@
       </section>
     </main>
     <section class="oculta" id="habitacionesContenido">
-      <div class="buttonsrooms">
-        <button id="roomsButton" class="button">
-          <div class="text">
-            <span>shared</span>
-            <span>bedrooms</span>
-          </div>
-          <div class="clone">
-            <span>shared</span>
-            <span>bedrooms</span>
-          </div>
-        </button>
+      <button id="roomsButton" class="button">
+        <div class="text">
+          <span>shared</span>
+          <span>bedrooms</span>
+        </div>
+        <div class="clone">
+          <span>shared</span>
+          <span>bedrooms</span>
+        </div>
+      </button>
 
-        <button id="badroomsButton" class="button">
-          <div class="text">
-            <span>Bathrooms</span>
-            <span>rooms</span>
-          </div>
-          <div class="clone">
-            <span>Bathrooms</span>
-            <span>rooms</span>
-          </div>
-        </button>
+      <button id="badroomsButton" class="button">
+        <div class="text">
+          <span>Bathrooms</span>
+          <span>rooms</span>
+        </div>
+        <div class="clone">
+          <span>Bathrooms</span>
+          <span>rooms</span>
+        </div>
+      </button>
 
-        <button id="spacesButton" class="button">
-          <div class="text">
-            <span>Common</span>
-            <span>Spaces</span>
-          </div>
-          <div class="clone">
-            <span>Common</span>
-            <span>Spaces</span>
-          </div>
-        </button>
+      <button id="spacesButton" class="button">
+        <div class="text">
+          <span>Common</span>
+          <span>Spaces</span>
+        </div>
+        <div class="clone">
+          <span>Common</span>
+          <span>Spaces</span>
+        </div>
+      </button>
 
-        <button id="privateRoomsButton" class="button">
-          <div class="text">
-            <span>Private</span>
-            <span>Rooms</span>
-          </div>
-          <div class="clone">
-            <span>Private</span>
-            <span>rooms</span>
-          </div>
-        </button>
-      </div>
+      <button id="privateRoomsButton" class="button">
+        <div class="text">
+          <span>Private</span>
+          <span>Rooms</span>
+        </div>
+        <div class="clone">
+          <span>Private</span>
+          <span>rooms</span>
+        </div>
+      </button>
     </section>
 
     <section id="habitacionesContenido1" class="oculta">
@@ -219,7 +217,7 @@
           rel="stylesheet"
         />
         <h1 style="font-family: 'Oswald', sans-serif" class="location">
-          OUR LOCATION :
+          OUR LOCATION:
         </h1>
       </header>
       <a
@@ -369,6 +367,8 @@
       badroomsContent.classList.add("oculta");
       spacesContent.classList.add("oculta");
       privateContent.classList.add("oculta");
+      habitacionesContenido1.classList.remove("oculta") +
+        habitacionesContenido1.classList.add("roomscont");
     });
 
     nosotrosButton.addEventListener("click", () => {
@@ -396,7 +396,8 @@
         habitacionesContenido.classList.add("oculta");
       contactoContenido.classList.remove("contactData");
       contactoContenido.classList.add("oculta");
-      habitacionesContenido1.classList.add("oculta");
+      habitacionesContenido1.classList.remove("roomscont") +
+        habitacionesContenido1.classList.add("oculta");
     });
 
     contactoButton.addEventListener("click", () => {
@@ -423,7 +424,8 @@
       habitacionesContenido.classList.add("oculta");
       nosotrosContenido.classList.remove("aboutData");
       nosotrosContenido.classList.add("oculta");
-      habitacionesContenido1.classList.add("oculta");
+      habitacionesContenido1.classList.remove("roomscont") +
+        habitacionesContenido1.classList.add("oculta");
     });
   </script>
 </html>
