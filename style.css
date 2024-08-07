@@ -263,8 +263,8 @@ html {
 }
 .redes {
   display: flexbox;
-  width: 90%; /* Tamaño mediano de las imágenes */
-  height: 80%; /* Mantiene la proporción de aspecto */
+  width: 12vw; /* Tamaño mediano de las imágenes */
+  height: 12vw; /* Mantiene la proporción de aspecto */
   margin: 1%; /* Espacio entre imágenes */
   border-radius: 1.88rem; /* Redondea las esquinas con un radio de 10px */
 }
